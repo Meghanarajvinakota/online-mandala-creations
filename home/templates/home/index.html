@@ -1,15 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<!-- Hero Image -->
-<section class="text-center" id="hero-container">
-    <h1 class="display-5 fw-bold text-body-emphasis" id="hero-heading">Mandala Creations</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4"></p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a class="btn black-button" href="{% url 'courses' %}" id="hero-button">View Our Courses</a>
-      </div>
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
     </div>
-  </section>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-4 logo-font text-black">
+                    Explore The Mandala world
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="" class="view-courses-button btn btn-lg rounded-0 text-uppercase py-3">View Courses</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
