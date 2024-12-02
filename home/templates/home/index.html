@@ -2,5 +2,14 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+<!-- Hero Image -->
+<section class="text-center" id="hero-container">
+    <h1 class="display-5 fw-bold text-body-emphasis" id="hero-heading">Mandala Creations</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4"></p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a class="btn black-button" href="{% url 'courses' %}" id="hero-button">View Our Courses</a>
+      </div>
+    </div>
+  </section>
 {% endblock %}
