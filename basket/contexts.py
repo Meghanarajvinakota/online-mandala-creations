@@ -1,3 +1,6 @@
+from django.shortcuts import get_object_or_404
+from courses.models import Course
+
 def basket_contents(request):
 
     # declare the basket items list
