@@ -5,9 +5,11 @@
                 All Courses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-courses-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Name</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'courses' %}?sort=price&direction=asc" class="dropdown-item">By Price(low to high)</a>
+                <a href="{% url 'courses' %}?sort=price&direction=desc" class="dropdown-item">By Price(high to low)</a>
+                <a href="{% url 'courses' %}?sort=name&direction=asc" class="dropdown-item ">By Name</a>
+                <a href="{% url 'courses' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'courses' %}?sort=level&direction=asc" class="dropdown-item ">By Level</a>
                 <a href="{% url 'courses' %}" class="dropdown-item">All Courses</a>
             </div>
         </li>

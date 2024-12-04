@@ -20,7 +20,18 @@ class Category(models.Model):
 
 class Course(models.Model):
     # Number prefixes used to allow for sorting
-
+    # Number prefixes used to allow for sorting
+    LEVEL_CHOICES = (
+        ('1-Beginner', '1-Beginnner'),
+        ('2-Intermediate', '2-Intermediate'),
+        ('3-Advanced', '3-Advanced')
+    )
+    level = models.CharField(
+        choices=LEVEL_CHOICES, max_length=254, null=True, blank=True
+        )
+    level_display_name = models.CharField(
+        max_length=254, null=True, blank=True
+        )
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL
         )

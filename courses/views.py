@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Course, Category
+from django.db.models.functions import Lower
 
 # Create your views here.
 
@@ -11,6 +12,22 @@ def all_courses(request):
     courses = Course.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                courses = courses.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            courses = courses.order_by(sortkey)
 
     if request.GET:
         if 'category' in request.GET:
@@ -25,14 +42,21 @@ def all_courses(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('courses'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query) |
+                Q(level__icontains=query)
+                )
             courses = courses.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
 
 
     context = {
         'courses': courses,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'courses/courses.html', context)
