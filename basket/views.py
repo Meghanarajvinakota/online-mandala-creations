@@ -27,5 +27,4 @@ def add_to_basket(request, item_id):
         messages.success(request, f'{course.name} was added to your basket')
 
     request.session['basket'] = basket
-    print(request.session['basket'])
     return redirect(redirect_url)
