@@ -17,10 +17,10 @@
                 Geometric Mandala
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="geometric-link">
-                <a href="" class="dropdown-item">Circle Mandala</a>
-                <a href="" class="dropdown-item">Heart Mandala</a>
-                <a href="" class="dropdown-item">Triangle Mandala</a>
-                <a href="" class="dropdown-item">Show All</a>
+                <a href="{% url 'courses' %}?category=circle_mandala" class="dropdown-item">Circle Mandala</a>
+                <a href="{% url 'courses' %}?category=heart_mandala" class="dropdown-item">Heart Mandala</a>
+                <a href="{% url 'courses' %}?category=triangle_mandala" class="dropdown-item">Triangle Mandala</a>
+                <a href="{% url 'courses' %}?category=circle_mandala,heart_mandala,triangle_mandala" class="dropdown-item">Show All</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Flower Mandala
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="flower-link">
-                <a href="" class="dropdown-item">Lotus Mandala</a>
-                <a href="" class="dropdown-item">Rose Mandala</a>
-                <a href="" class="dropdown-item">Show All</a>
+                <a href="{% url 'courses' %}?category=lotus_mandala" class="dropdown-item">Lotus Mandala</a>
+                <a href="{% url 'courses' %}?category=rose_mandala" class="dropdown-item">Rose Mandala</a>
+                <a href="{% url 'courses' %}?category=lotus_mandala,rose_mandala" class="dropdown-item">Show All</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Animal Mandala
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="animal-link">
-                <a href="" class="dropdown-item">Elephant Mandala</a>
-                <a href="" class="dropdown-item">Lion Mandala</a>
-                <a href="" class="dropdown-item">Bird Mandala</a>
-                <a href="" class="dropdown-item">Show All</a>
+                <a href="{% url 'courses' %}?category=elephant_mandala" class="dropdown-item">Elephant Mandala</a>
+                <a href="{% url 'courses' %}?category=lion_mandala" class="dropdown-item">Lion Mandala</a>
+                <a href="{% url 'courses' %}?category=bird_mandala" class="dropdown-item">Bird Mandala</a>
+                <a href="{% url 'courses' %}?category=elephant_mandala,lion_mandala,bird_mandala" class="dropdown-item">Show All</a>
             </div>
         </li>
     </ul>

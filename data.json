@@ -1,0 +1,146 @@
+[
+    {
+        "model": "courses.category",
+        "pk": 1,
+        "fields": {
+            "name": "Geometric Mandala",
+            "display_name": "Geometric"
+        }
+    },
+    {
+        "model": "courses.category",
+        "pk": 2,
+        "fields": {
+            "name": "Flower Mandala",
+            "display_name": "Flower"
+        }
+    },
+    {
+        "model": "courses.category",
+        "pk": 3,
+        "fields": {
+            "name": "Animal Mandala",
+            "display_name": "Animal"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "name": "Circle Mandala",
+            "subtitle": null,
+            "description": "The circular shape of a mandala represents the idea of wholeness and completion, and serves as a symbol of the universe. The center of a mandala is considered the center of the universe, and the outer circle symbolizes the boundary of the universe.",
+            "price": "29.99",
+            "date_created": "2024-12-02T14:28:19Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "circle_mandala.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 2,
+        "fields": {
+            "category": 1,
+            "name": "Heart Mandala",
+            "subtitle": null,
+            "description": "It is the symbol for attraction, femininity and sensuality but it also symbolizes unity and cohesion.",
+            "price": "19.99",
+            "date_created": "2024-12-02T21:39:56Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "Heart_Mandala.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 3,
+        "fields": {
+            "category": 1,
+            "name": "Triangle Mandala",
+            "subtitle": null,
+            "description": "power and dynamic, insight to the future, it may sing marginalization of your inner world.",
+            "price": "24.99",
+            "date_created": "2024-12-02T21:43:31Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "triangle_mandala.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 4,
+        "fields": {
+            "category": 2,
+            "name": "Lotus Mandala",
+            "subtitle": null,
+            "description": "The lotus flower's desire to emerge from the mud and burst into full bloom symbolizes an individual's ability to rise up from the material world",
+            "price": "19.99",
+            "date_created": "2024-12-02T21:45:20Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "lotus_mandala.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 5,
+        "fields": {
+            "category": 2,
+            "name": "Rose Mandala",
+            "subtitle": null,
+            "description": "This mandala is of a red rose. Red roses symbolize love, passion, and desire.",
+            "price": "24.99",
+            "date_created": "2024-12-02T21:48:26Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "rose_mandala.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 6,
+        "fields": {
+            "category": 3,
+            "name": "Elephant Mandala",
+            "subtitle": null,
+            "description": "The elephant in mandala art is symbolic of strength and steadfastness.",
+            "price": "24.99",
+            "date_created": "2024-12-02T21:51:05Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "elephant_mandala_A8khQGC.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 7,
+        "fields": {
+            "category": 3,
+            "name": "Lion Mandala",
+            "subtitle": null,
+            "description": "The fight of good against evil, but most importantly the balance of the two on Earth",
+            "price": "29.99",
+            "date_created": "2024-12-02T21:52:32Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "lion_mandala.jpg"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 8,
+        "fields": {
+            "category": 3,
+            "name": "Bird Manadala",
+            "subtitle": null,
+            "description": "They symbolize freedom and transformation.",
+            "price": "14.99",
+            "date_created": "2024-12-02T21:54:08Z",
+            "course_url": null,
+            "image_url": null,
+            "image": "bird_manadla.jpeg"
+        }
+    }
+]
