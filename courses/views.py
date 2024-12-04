@@ -22,20 +22,19 @@ def all_courses(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 courses = courses.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             courses = courses.order_by(sortkey)
 
-    if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             courses = courses.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-    if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
