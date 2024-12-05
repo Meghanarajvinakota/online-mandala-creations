@@ -50,7 +50,7 @@
                                             <p class="my-0">${{ item.course.price }}</p>
                                         </td>
                                         <td class="py-3">
-                                            <a class="btn btn-outline-black small-button" href="">Remove This Item</a>
+                                            <a class="btn btn-outline-black small-button" href="{% url 'remove_from_basket' item.course.id %}">Remove This Item</a>
                                         </td>
                                     </tr>
                                 {% endfor %}
@@ -89,4 +89,24 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+
+
+    <script>
+
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/basket/remove/${itemId}/`;
+
+            $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+        })
+    </script>
+
 {% endblock %}

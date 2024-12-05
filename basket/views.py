@@ -28,3 +28,19 @@ def add_to_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(redirect_url)
+
+def remove_from_basket(request, item_id):
+    """Remove the item from the shopping basket"""
+
+    # Function for removing items from basket
+    try:
+        basket = request.session.get('basket', {})
+
+        basket.pop(item_id)
+
+        request.session['basket'] = basket
+        return redirect(reverse('view_basket'))
+    except Exception as e:
+        # This runs if user tries to remove an item that is not in the basket
+        messages.error(request, "Oops, that didn't work, please try again.")
+        return redirect(reverse('home'))
