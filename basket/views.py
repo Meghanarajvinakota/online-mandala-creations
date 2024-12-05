@@ -37,7 +37,7 @@ def remove_from_basket(request, item_id):
         basket = request.session.get('basket', {})
 
         basket.pop(item_id)
-
+        
         request.session['basket'] = basket
         return redirect(reverse('view_basket'))
     except Exception as e:
