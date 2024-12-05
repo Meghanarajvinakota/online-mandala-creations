@@ -24,7 +24,58 @@
             <div class="col">
                 {% if basket_items %}
                     <div class="table-responsive rounded">
-                        {{ basket_items}}
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Product Info</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Edit</th>
+                                </tr>
+                            </thead>
+                            {% for item in basket_items %}
+                                <!-- Displays all items in the basket -->
+                                    <tr>
+                                        <td class="p-3 w-25">
+                                            <img class="img-fluid rounded" src="{{ item.course.image_url }}" >
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0"><strong>{{ item.course.name }}</strong></p>
+                                            <!-- Checks if course has a subtitle -->
+                                            {% if item.course.subtitle %}
+                                                <p class="my-0">{{ item.course.subtitle }}</p>
+                                            {% endif %}
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0">${{ item.course.price }}</p>
+                                        </td>
+                                        <td class="py-3">
+                                            <a class="btn btn-outline-black small-button" href="">Remove This Item</a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td colspan="4" class="py-3 text-right">
+                                        <h4 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-right" id="checkout-button-container">
+                                        <a href="{% url 'courses' %}" class="btn btn-outline-black btn-lg">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Back To Courses</span>
+                                        </a>
+                                        <a href="" class="btn btn-black btn-lg">
+                                            <span class="text-uppercase">Secure Checkout</span>
+                                            <span class="icon">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                        </table>
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
