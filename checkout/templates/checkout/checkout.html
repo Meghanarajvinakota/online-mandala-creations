@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="default-page-container">
+<div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -92,7 +92,7 @@
                         {{ order_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
-                            <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                            <label class="form-check-label" for="id-save-info">Save this information to my
                                 profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                                 checked>
@@ -137,5 +137,11 @@
             </div>
         </div>
     </div>
-</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
