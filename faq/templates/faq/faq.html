@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="default-page-container" id="faq-accordion-container">
+    <div id="faq-accordion">
+        <h1 id="faq-heading">Faqs</h1>
+        <ul class="faq-ul">
+        <!-- Populates the FAQ accordion -->
+        {% for faq in faqs %}
+            <li class="faq-li">
+                <input type="checkbox" checked class="faq-input" aria-label="FAQ Dropdown Checkbox">
+                <i></i>
+                <h2 class="faq-h2">{{ faq.question }}</h2>
+                <p class="faq-text">{{ faq.answer }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
