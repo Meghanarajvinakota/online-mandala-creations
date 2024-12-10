@@ -142,7 +142,7 @@
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-black">Home</a></li>
             <li class="nav-item mb-2"><a href="{% url 'courses' %}" class="nav-link p-0 text-body-secondary text-black">Our Courses</a></li>
-            <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">About</a></li>
+            <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-body-secondary text-black">About</a></li>
             <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">FAQs</a></li>
             <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">Contact</a></li>
           </ul>
@@ -160,8 +160,8 @@
           {% else %}
             <h5>Account</h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="{% url 'account_signup' %}" class="nav-link p-0 text-body-secondary">Register</a></li>
-              <li class="nav-item mb-2"><a href="{% url 'account_login' %}" class="nav-link p-0 text-body-secondary">Login</a></li>
+              <li class="nav-item mb-2"><a href="{% url 'account_signup' %}" class="nav-link p-0 text-body-secondary text-black">Register</a></li>
+              <li class="nav-item mb-2"><a href="{% url 'account_login' %}" class="nav-link p-0 text-body-secondary text-black">Login</a></li>
             </ul>
           {% endif %}
         </div>

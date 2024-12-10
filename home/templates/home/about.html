@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="default-page-container">
+    <h1 class="text-center default-page-header" id="about-header">About Us</h1>
+
+    <!-- ABOUT US FEATURES -->
+    <div class="container marketing">
+        
+        <!-- FIRST FEATURE -->
+        <div class="row featurette">
+            <div class="col-md-7 about-section-container">
+                <h2 class="about-subheading fw-normal lh-1">Who We Are</h2>
+                <p class="lead">
+                    We are a group of artists , after decades of teaching had a thought: "Just because we're teaching mandala arts, doesn't mean our teaching itself
+                    has to be old-fashioned!" We created online mandala creations to embody that idea; to use all of the knowledge  that exists today in order to modernize the way we
+                    teach the mandala art.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="/media/about_page1.jpg" alt="" class="about-img img-fluid mx-auto">
+            </div>
+        </div>
+
+        <hr class="about-separator">
+
+        <!-- SECOND FEATURE -->
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2 about-section-container">
+                <h2 class="about-subheading fw-normal lh-1">What We Do</h2>
+                <p class="lead">Here at Mandala creations, Create Your Own Mandalas Start with simple designs using tools like compasses, rulers, and pencils to create basic geometric shapes and patterns.
+                    Symmetry and Balance: Learn how to create symmetrical designs, as balance is key in mandala creation. You’ll practice dividing a circle into equal parts and layering patterns that radiate from a central point.
+                    Coloring and Shading: Explore how colors can influence the energy and mood of a mandala. You'll experiment with different color palettes and learn to use shading to bring depth and dimension to your designs.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="/media/about_image.jpg" alt="" class="about-img img-fluid mx-auto">
+            </div>
+        </div>
+
+        <hr class="about-separator">
+
+        <!-- THIRD FEATURE -->
+        <div class="row featurette">
+            <div class="col-md-7 about-section-container">
+                <h2 class="about-subheading fw-normal lh-1">Your Journey With Us</h2>
+                <p class="lead">We are so proud of our courses and we know you'll love them too. Each course has extensive video material that you can progress through at whatever pace you wish.
+                    At online manadala creations, we know that everybody learns in different ways, that's why all of our courses have accompanying
+                    worksheets and many other resources to ensure that you have all the tools you need to learn in the way that is the most
+                    productive and enjoyable for you.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="/media/about_page2.jpg" alt="" class="about-img img-fluid mx-auto" id="about-last-img">
+            </div>
+        </div>
+    </div>
+    <div id="about-button-container">
+        <a class="btn btn-black rounded-0" href="{% url 'courses' %}">Check Out Our Courses!</a>
+    </div>
+</div>
+    {% endblock %}
