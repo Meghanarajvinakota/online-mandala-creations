@@ -138,7 +138,7 @@ a.category-badge>span.badge:hover {
 
 #about-header {
     padding-top: 83px;
-    margin-top: 0;
+    margin-top: 50px;
 }
 
 .about-text {
@@ -287,27 +287,35 @@ a.category-badge>span.badge:hover {
 .faq-ul li:nth-of-type(1) {
     animation-delay: 0.2s;
 }
+
 .faq-ul li:nth-of-type(2) {
     animation-delay: 0.3s;
 }
+
 .faq-ul li:nth-of-type(3) {
     animation-delay: 0.4s;
 }
+
 .faq-ul li:nth-of-type(4) {
     animation-delay: 0.5s;
 }
+
 .faq-ul li:nth-of-type(5) {
     animation-delay: 0.6s;
 }
+
 .faq-ul li:nth-of-type(6) {
     animation-delay: 0.7s;
 }
+
 .faq-ul li:nth-of-type(7) {
     animation-delay: 0.8s;
 }
+
 .faq-ul li:nth-of-type(8) {
     animation-delay: 0.9s;
 }
+
 .faq-ul li:nth-of-type(9) {
     animation-delay: 1s;
 }
@@ -391,6 +399,162 @@ a.category-badge>span.badge:hover {
         transform-origin: top center;
         transform: rotateX(0deg);
     }
+}
+
+/* -------- CUSTOM FORMS -------- */
+
+.custom-form-outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    margin-bottom: 100px;
+}
+
+.custom-form-inner-container {
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+
+    .custom-form-inner-container input,
+    .custom-form-inner-container select,
+    .custom-form-inner-container textarea {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+}
+
+.custom-form-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* -------- CONTACT PAGES -------- */
+
+#contact-table-container-outer {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-table-container {
+    max-width: 800px;
+    margin: 50px 0px;
+}
+
+#contact-table {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#contact-table .fa-check {
+    color: #fff;
+}
+
+#contact-table .fa-xmark {
+    color: red;
+}
+
+#contact-message {
+    word-wrap: break-word;
+    max-width: 50vw;
+}
+
+@media (max-width: 768px) {
+
+    .contact-list-email,
+    .contact-list-name,
+    .contact-list-header-name,
+    .contact-list-header-email {
+        display: none;
+    }
+}
+
+#message-detail-container-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+#responded-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#responded-form label {
+    display: none;
+}
+
+#id_responded {
+    height: 18px;
+    width: 18px;
+    margin-top: 5px;
+}
+
+#contact-delete-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#message-delete-button {
+    margin-right: 10px;
+}
+
+#message-success-text {
+    margin-bottom: 60px;
+}
+
+#formDiv {
+    display: none;
+}
+
+#response-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#response-form p {
+    display: none;
+}
+
+#response-form input {
+    margin: 2px;
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    width: 300px;
+    font-weight: 700;
+}
+
+#responded-update-button {
+    margin: 20px !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 170px !important;
+    border: 1px solid grey !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+}
+
+#responded-update-button:hover {
+    color: #d6d6d6 !important;
+    border: 1px solid #ed8500 !important;
+}
+
+#email_body {
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px #00000099;
+    border: 0;
+    padding: 8px;
 }
 
 /* ------------------------------- bootstrap toasts */
