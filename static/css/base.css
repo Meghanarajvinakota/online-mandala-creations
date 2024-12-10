@@ -3,11 +3,55 @@ html {
 }
 
 body {
-    background: url('/media/home_page.jpg') no-repeat center center fixed;
+    background-color: white;
+}
+
+/* -------- HERO IMAGE -------- */
+
+#hero-img {
+    border-radius: 10px;
+}
+
+#hero-container-inner {
+    flex-direction: column-reverse;
+}
+
+@media (max-width: 991px) {
+    #hero-container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 460px;
+    }
+}
+
+#hero-container-text li p {
+    font-size: 1.2rem;
+}
+
+#hero-button {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#hero-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0)), url('/media/home_page.jpg');
+    background-color: rgb(248, 151, 5);
+    /* Used if the image is unavailable */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 164px);
-    color: #090909;
-    font-family: 'Lato';
+    position: relative;
+    min-height: 100vh;
+}
+
+
+#hero-heading {
+    color: black;
+    font-size: 4rem;
+    padding-top: 106px;
+    text-shadow: 5px 3px 6px #00000099;
 }
 
 /* from Bulma */
@@ -40,7 +84,8 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -62,17 +107,17 @@ body {
     border: 1px solid black !important;
 }
 
-.overlay {
+/*.overlay {
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: rgb(248, 151, 5);
+	background:white;
 	z-index: -1;
-}
+}*/
 
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
@@ -85,8 +130,7 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link 
-.update_link {
+.btt-link .update_link {
     cursor: pointer;
 }
 
@@ -109,10 +153,10 @@ a.category-badge > span.badge:hover {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -158,13 +202,47 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+/* -------- FOOTER -------- */
+
+footer {
+    position: relative;
+    background-color: white;
+}
+
+.footer-separator {
+    border-top: 5px solid black;
+    margin: 0;
+}
+
+#mailing-list-button {
+    max-width: 250px;
+}
+
+.footer-credit-icon {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.footer-credit-text {
+    font-size: 16px;
+    padding-top: 3px;
+}
+
+.footer-icons {
+    color: #000;
+}
+
+.footer-icons:hover {
+    color: #c47003;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */

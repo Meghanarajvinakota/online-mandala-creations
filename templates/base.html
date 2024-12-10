@@ -131,6 +131,64 @@
 
     {% block content %}
     {% endblock %}
+    
+    <hr class="footer-separator">
+
+    <!-- Footer -->
+    <footer class="container py-5" id="footer-container">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Site Pages</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-black">Home</a></li>
+            <li class="nav-item mb-2"><a href="{% url 'courses' %}" class="nav-link p-0 text-body-secondary text-black">Our Courses</a></li>
+            <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">About</a></li>
+            <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">Contact</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <!-- Logged-in user links -->
+          {% if user.is_authenticated %}
+            <h5>My Account</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">My Profile</a></li>
+              <li class="nav-item mb-2"><a href="{% url 'account_logout' %}" class="nav-link p-0 text-body-secondary text-black">Logout</a></li>
+            </ul>
+          <!-- Non logged-in user links -->
+          {% else %}
+            <h5>Account</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="{% url 'account_signup' %}" class="nav-link p-0 text-body-secondary">Register</a></li>
+              <li class="nav-item mb-2"><a href="{% url 'account_login' %}" class="nav-link p-0 text-body-secondary">Login</a></li>
+            </ul>
+          {% endif %}
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <!-- Newsletter subscription button -->
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Exciting news and exclusive deals!</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <a class="btn black-button" id="mailing-list-button" href="">Subscribe to our mailing list</a>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p class="footer-credit-text">&copy; 2024 Mandala Creations, All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li>
+            <p class="footer-credit-text">Site designed & developed by Meghana Vinakota</p>
+          </li>
+          <li class="ms-3 "><a class="link-body-emphasis footer-credit-icon" rel="author" href="https://github.com/MeghanaVinakota"><i class="fa-brands fa-github footer-icons"></i></a></li>
+          <li class="ms-3 "><a class="link-body-emphasis footer-credit-icon" rel="author" href="https://www.linkedin.com/in/MeghanaVinakota/"><i class="fa-brands fa-linkedin footer-icons"></i></a></li>
+        </ul>
+      </div>
+    </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
