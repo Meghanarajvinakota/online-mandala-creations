@@ -4,6 +4,8 @@ html {
 
 body {
     background-color: white;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
 }
 
 /* -------- HERO IMAGE -------- */
@@ -89,6 +91,18 @@ body {
     border: 1px solid black;
 }
 
+.btn-outline-black:hover,
+
+.btn-outline-black:active,
+
+.btn-outline-black:focus {
+
+    background: black;
+
+    color: white !important;
+
+}
+
 .view-courses-button:hover,
 .view-courses-button:active,
 .view-courses-button:focus,
@@ -106,8 +120,12 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+.bg-black {
 
-/*.overlay {
+    background: #000 !important;
+
+}
+overlay {
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -115,8 +133,8 @@ body {
 	position: fixed;
 	background:white;
 	z-index: -1;
-}*/
 
+}
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -130,8 +148,13 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
-.btt-link .update_link {
+.btt-link .update_link .remove-item {
     cursor: pointer;
+}
+
+input[name='q']::placeholder {
+
+    color: #aab7c4;
 }
 
 /* -------- ABOUT PAGE -------- */
@@ -408,6 +431,7 @@ a.category-badge>span.badge:hover {
     flex-direction: column;
     align-items: center;
     border: none;
+    margin-top: 160px;
     margin-bottom: 100px;
 }
 
