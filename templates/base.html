@@ -72,7 +72,7 @@
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">Course Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -153,7 +153,7 @@
           {% if user.is_authenticated %}
             <h5>My Account</h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary text-black">My Profile</a></li>
+              <li class="nav-item mb-2"><a href="{% url 'profile' %}" class="nav-link p-0 text-body-secondary text-black">My Profile</a></li>
               <li class="nav-item mb-2"><a href="{% url 'account_logout' %}" class="nav-link p-0 text-body-secondary text-black">Logout</a></li>
             </ul>
           <!-- Non logged-in user links -->
