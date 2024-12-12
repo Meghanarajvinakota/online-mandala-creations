@@ -1,0 +1,1 @@
+web: gunicorn mandala_creations.wsgi:application
