@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <!-- Unsubscribe Page -->
+    <div class="default-page-container">
+        <h1 class="default-page-header">Unsubscribe</h1>
+        <div id="unsubscribe-button-container">
+            <a class="btn black-button text-center" href="{% url 'mailing-list-unsubscribe' user.email %}">Unsubscribe</a>
+        </div>
+    </div>
+{% endblock %}
