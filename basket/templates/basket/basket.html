@@ -37,7 +37,7 @@
                                 <!-- Displays all items in the basket -->
                                     <tr>
                                         <td class="p-3 w-25">
-                                            {% if item.product.image %}
+                                            {% if item.course.image %}
                                                 <img class="img-fluid rounded" src="{{ item.course.image_url }}" alt="{{ item.course.name }}">
                                             {% else %}
                                                 <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.course.name }}">
