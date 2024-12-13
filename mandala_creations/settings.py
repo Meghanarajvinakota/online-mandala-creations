@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-if os.path.exists("env.py"):
-    import env
-
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+ja3&y!&x#4u)$ub874^0!-x*x!k--g+*1@j7-=h0i&4^ctcvu'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-meghanarajv-onlinemanda-7anr4ejzwng.ws.codeinstitute-ide.net','online-manadala-creations.herokuapp.com','online-manadala-creations-6dbde778a153.herokuapp.com', 'localhost']
 
