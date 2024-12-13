@@ -30,7 +30,7 @@ SECRET_KEY = '+ja3&y!&x#4u)$ub874^0!-x*x!k--g+*1@j7-=h0i&4^ctcvu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-meghanarajv-onlinemanda-7anr4ejzwng.ws.codeinstitute-ide.net','online-manadala-creations.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-meghanarajv-onlinemanda-7anr4ejzwng.ws.codeinstitute-ide.net','online-manadala-creations.herokuapp.com','online-manadala-creations-6dbde778a153.herokuapp.com', 'localhost']
 
 
 # Application definition
