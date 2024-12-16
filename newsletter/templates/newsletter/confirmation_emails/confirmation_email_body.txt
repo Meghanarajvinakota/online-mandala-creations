@@ -9,3 +9,4 @@ Keep an eye out for exciting news from Online Mandala Creations, and don't forge
 
 Online Mandala Creations
 If you wish to unsubscribe from these emails, click the link below (you may need to log in to your account)
+https://online-manadala-creations-6dbde778a153.herokuapp.com/newsletter/unsubscribe
