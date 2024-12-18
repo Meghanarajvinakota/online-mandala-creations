@@ -130,7 +130,7 @@ class CourseViewTestCase(TestCase):
         Tests that the courses page is rendered properly
         """
 
-        response = self.client.get('/courses/courses/')
+        response = self.client.get('/courses/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(
             response, 'courses/courses.html', 'base.html'
@@ -165,7 +165,7 @@ class CourseViewTestCase(TestCase):
         self.client.force_login(test_user)
 
         # Try to access edit course page (staff-only)
-        response = self.client.get(f'/courses/courses/edit/{course1.pk}/')
+        response = self.client.get(f'/courses/edit/{course1.pk}/')
 
         # Check that page access is not granted
         self.assertNotEqual(response.status_code, 200)
@@ -177,7 +177,7 @@ class CourseViewTestCase(TestCase):
         self.client.force_login(test_user_staff)
 
         # Try to access course details page (staff-only)
-        response = self.client.get(f'/courses/courses/edit/{course1.pk}/')
+        response = self.client.get(f'/courses/edit/{course1.pk}/')
 
         # Check that page access is granted
         self.assertEqual(response.status_code, 200)
@@ -196,7 +196,7 @@ class CourseViewTestCase(TestCase):
 
         # update the course
         response = self.client.post((
-            f'/courses/courses/edit/{courseToUpdate.pk}/'
+            f'/courses/edit/{courseToUpdate.pk}/'
             ), {
             'name': "test_course_updated",
             'description': "test_course_description_updated",
@@ -248,7 +248,7 @@ class CourseViewTestCase(TestCase):
         self.client.force_login(test_user)
 
         # Try to access add course page (staff-only)
-        response = self.client.get(f'/courses/courses/add/')
+        response = self.client.get(f'/courses/add/')
 
         # Check that page access is not granted
         self.assertNotEqual(response.status_code, 200)
@@ -260,7 +260,7 @@ class CourseViewTestCase(TestCase):
         self.client.force_login(test_user_staff)
 
         # Try to access add course page (staff-only)
-        response = self.client.get(f'/courses/courses/add/')
+        response = self.client.get(f'/courses/add/')
 
         # Check that page access is granted
         self.assertEqual(response.status_code, 200)
@@ -278,7 +278,7 @@ class CourseViewTestCase(TestCase):
         originalCourseId = originalCourse.pk
 
         # Create a new test course using the page form
-        response = self.client.post(('/courses/courses/add/'), {
+        response = self.client.post(('/courses/add/'), {
             'name': 'test_course_created',
             'description': 'test_course_description_created',
             'price': '99.99',
@@ -293,7 +293,7 @@ class CourseViewTestCase(TestCase):
         # Check that the most recent course created is
         # not the original course, meaning a new one
         # was successfully created
-        self.assertNotEqual((originalCourseId), (newTestCourseId))
+        self.assertNotEqual((originalCourseId), (newTestCoursetId))
 
         # Check that the most recently created object
         # is our test course object
@@ -340,7 +340,7 @@ class CourseViewTestCase(TestCase):
 
         # Delete the course object using the delete view
         response = self.client.post(
-            f'/courses/courses/delete/{courseToDelete.pk}/', follow=True
+            f'/courses/delete/{courseToDelete.pk}/', follow=True
             )
         self.assertEqual(response.status_code, 200)
 

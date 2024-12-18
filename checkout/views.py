@@ -9,14 +9,20 @@ from courses.models import Course
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from basket.contexts import basket_contents
-
+import os
 import stripe
 import json
 
 @require_POST
 def cache_checkout_data(request):
     try:
-        pid = request.POST.get('client_secret').split('_secret')[0]
+        client_secret = request.POST.get('client_secret')
+        if not client_secret:
+            return HttpResponseBadRequest("Missing client_secret")
+
+    # Proceed with splitting the client_secret
+        pid = client_secret.split('_secret')[0]
+        #pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'basket': json.dumps(request.session.get('basket', {})),
@@ -51,6 +57,7 @@ def checkout(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
+            # pid = os.getenv('TEST_PID')  # For test purposes only
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
