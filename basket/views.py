@@ -6,10 +6,12 @@ from courses.models import Course
 
 # Create your views here.
 
+
 def view_basket(request):
     """ A view that renders the basket contents page """
 
     return render(request, 'basket/basket.html')
+
 
 def add_to_basket(request, item_id):
 
@@ -29,6 +31,7 @@ def add_to_basket(request, item_id):
     request.session['basket'] = basket
     return redirect(redirect_url)
 
+
 def remove_from_basket(request, item_id):
     """Remove the item from the shopping basket"""
 
@@ -37,7 +40,6 @@ def remove_from_basket(request, item_id):
         basket = request.session.get('basket', {})
 
         basket.pop(item_id)
-        
         request.session['basket'] = basket
         return redirect(reverse('view_basket'))
     except Exception as e:

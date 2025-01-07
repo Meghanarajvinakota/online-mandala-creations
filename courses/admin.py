@@ -3,6 +3,7 @@ from .models import Course, Category
 
 # Register your models here.
 
+
 class CourseAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -10,6 +11,7 @@ class CourseAdmin(admin.ModelAdmin):
         'price',
         'date_created'
     )
+
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Category)

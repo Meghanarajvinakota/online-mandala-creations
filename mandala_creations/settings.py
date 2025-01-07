@@ -31,7 +31,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-meghanarajv-onlinemanda-7anr4ejzwng.ws.codeinstitute-ide.net','online-manadala-creations.herokuapp.com','online-manadala-creations-6dbde778a153.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-meghanarajv-onlinemanda-7anr4ejzwng.ws.codeinstitute-ide.net','online-manadala-creations.herokuapp.com',
+'online-manadala-creations-6dbde778a153.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -170,7 +171,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -226,4 +226,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-

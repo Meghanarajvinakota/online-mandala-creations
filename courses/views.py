@@ -8,6 +8,7 @@ from .models import Course, Category
 from .forms import CourseForm
 # Create your views here.
 
+
 def all_courses(request):
     """ A view to show all courses, including sorting and search queries """
 
@@ -40,9 +41,10 @@ def all_courses(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('courses'))
-            
+
             queries = (
                 Q(name__icontains=query) |
                 Q(description__icontains=query) |
@@ -51,8 +53,6 @@ def all_courses(request):
             courses = courses.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
-
     context = {
         'courses': courses,
         'search_term': query,
@@ -61,6 +61,7 @@ def all_courses(request):
     }
 
     return render(request, 'courses/courses.html', context)
+
 
 def course_detail(request, course_id):
     """ A view to show individual course details """
@@ -72,6 +73,7 @@ def course_detail(request, course_id):
     }
 
     return render(request, 'courses/course_detail.html', context)
+
 
 @login_required
 def add_course(request):
@@ -88,7 +90,9 @@ def add_course(request):
             messages.success(request, 'Successfully added course!')
             return redirect(reverse('course_detail', args=[course.id]))
         else:
-            messages.error(request, 'Failed to add course. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add course.'
+                           'Please ensure the form is valid.')
     else:
         form = CourseForm()
 
@@ -98,6 +102,7 @@ def add_course(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_course(request, course_id):
@@ -114,7 +119,8 @@ def edit_course(request, course_id):
             messages.success(request, 'Successfully updated course!')
             return redirect(reverse('course_detail', args=[course.id]))
         else:
-            messages.error(request, 'Failed to update course. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update course.'
+                                    'Please ensure the form is valid.')
     else:
         form = CourseForm(instance=course)
         messages.info(request, f'You are editing {course.name}')
@@ -127,13 +133,13 @@ def edit_course(request, course_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_course(request, course_id):
     """ Delete a course """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
     course = get_object_or_404(Course, pk=course_id)
     course.delete()
     messages.success(request, 'Course deleted!')

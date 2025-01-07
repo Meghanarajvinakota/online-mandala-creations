@@ -86,8 +86,6 @@ class BasketViewTestCase(TestCase):
 
         # Get the most recently created course (test course)
         course1 = Course.objects.latest('pk')
-        
-
         # Try to add the test course to the basket
         response = self.client.post(('/basket/add/1/'), {
             'course_id': 1,
@@ -128,14 +126,12 @@ class BasketViewTestCase(TestCase):
         from the basket, checks that it is unsuccessful.
         """
         course1 = Course.objects.latest('pk')
-       
         # Try to add the test course to the basket
         response = self.client.post(('/basket/add/1/'), {
             'course_id': 1,
             'quantity': 1,
             'redirect_url': '/',
         }, follow=True)
-         
         # Check that the basket add action executes successfully
         self.assertEqual(response.status_code, 200)
 

@@ -229,5 +229,5 @@ class CheckoutViewTestCase(TestCase):
             'county': 'test_county',
             'pid': 'test_pid',
             'stripe_pid': 'test_stripe_pid',
-            'client_secret': 'test_client_secret_value', 
+            'client_secret': 'test_client_secret_value',
         }, follow=True)

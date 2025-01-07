@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from courses.models import Course
 
+
 def basket_contents(request):
 
     # declare the basket items list
@@ -31,5 +32,4 @@ def basket_contents(request):
         'course_count': course_count,
         'grand_total': grand_total,
     }
-
     return context
