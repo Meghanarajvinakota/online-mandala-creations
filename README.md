@@ -1,0 +1,243 @@
+# [ONLINE MANDALA CREATIONS](https://online-manadala-creations-6dbde778a153.herokuapp.com/)
+
+
+![screenshot](documentation/mockup.png)
+
+Online Mandala Creations is a fully functioning e-commerce web application. The site allows users to view and purchase digital mandala courses online. Users can easily create personal accounts and profiles and see information on the site, and the courses themselves. The site also enables administrators to add, edit and remove products, as well as view and respond to contact enquiries.
+
+## UX
+
+The design philosophy was to create a fun, engaging look, while keeping relevant information presented in a salient and clean manner, allowing the user to easily and pleasingly navigate through the site.
+
+### Colour Scheme
+
+![screenshot](documentation/coolers.png)
+
+
+### Typography
+
+- [DM Sans](https://fonts.google.com/specimen/DM+Sans) was used for the primary headers and titles and text.
+
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site.
+
+## User Stories
+
+All user stories can be found in a linked GitHub project [here](https://github.com/users/Meghanarajvinakota/projects/10/views/2)
+
+
+## Features
+
+### Existing Features
+
+### Site Pages
+
+- **Homepage**
+
+    - The main homepage for the site. Hero image is large and striking. Large heading tells users they are in the right place. Call to action button to invite users to enter and explore the site courses.
+
+![screenshot](documentation/features/sitepages/home.png)
+
+- **Courses Page**
+
+    - Courses page. Displays the site products available for the user to purchase. Displays images of products and their essential information including title, description, price, category & level. Courses are displayed in a pleasing responsive grid layout, making it easy for a user to browse the courses. Courses utilise a mouse-hover animation to add to the interactivity of the page. Courses can also be filtered and sorted by name, price and other criteria.
+    Administrators viewing this page can see links under each course to edit or delete the course.
+
+![screenshot](documentation/features/sitepages/courses.png)
+
+- **About Page**
+
+    - About page. Gives users essential information about online mandala creations. Text content interspersed with pictures helps to break up the page and keep the user engaged with the presented information. 
+
+![screenshot](documentation/features/sitepages/about.png)
+
+- **FAQ Page**
+
+    - FAQ Page. Displays the most frequently asked questions about the site. Lets users know essential information and quells worries that they may have about the site and its products. Animation and accordion serve to make the information engaging and clean.
+
+![screenshot](documentation/features/sitepages/faq.png)
+
+- **Contact Page**
+
+    - Contact Page. Users can contact the site owner using the contact form. If the user is logged in, their email is pre-filled in the email input field. Users can choose from a selection of subjects and leave their message via the text box. 
+
+![screenshot](documentation/features/sitepages/contact.png)
+
+- **Contact Success Page**
+
+    - Contact Success Page. Users see this page after sending a contact message via the contact page. This page serves to confirm to the user that their message has been sent successfully. A short message informs the user that their contact message has been received, and that one of the team will respond as soon as possible.
+
+![screenshot](documentation/features/sitepages/contact-success.png)
+
+- **Contact Requests Page - Admin Only**
+
+    - Contact Requests Page. Admins can see a list of all of the contact messages sent by users. Messages are displayed in an easy-to-read table, with all of the salient information presented. Messages are automatically sorted with those messages which have not been responded to at the top of the list, with the oldest (the message which has gone unanswered the longest) at the top. Admins can click on the view details links to see the full contact messages, as well as respond to the message.
+
+![screenshot](documentation/features/sitepages/contact-requests.png)
+
+- **Contact Details Page - Admin Only**
+
+    - Contact Details Page. Admins can see details of a contact message left by the user. All of the contact message's information can be seen, including email, name, subject, message, and whether this contact message has been respond to. Contact messages can be responded to or deleted via the large buttons at the bottom of the page. A link navigates back to the contact requests page.
+
+![screenshot](documentation/features/sitepages/contact-details.png)
+
+- **Contact Delete Page - Delete - Admin Only**
+
+    - Contact Message Delete Page. An admin sees this page after clicking the delete message button on the Contact Details Page. This page double checks that deletion of the contact message is the intended course of action and allows an admin to either confirm the action or return to the contact message's detail page.
+
+![screenshot](documentation/features/sitepages/contact-delete.png)
+
+- **Signup Page**
+
+    - Signup Page. Displays a signup form that new users can use to register an account on the site. Simple input fields for email, username and password make it easy for users to sign up for an account, an confirmation inputs insure that users do not accidentally register with incorrect information. A sign in link at the top of the page lets users who already have an account easily find the login page.
+
+![screenshot](documentation/features/sitepages/signup.png)
+
+- **Login Page**
+
+    - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A 'remember me' checkbox allows users to choose to have their login information stored for faster login in future. A Forgot Password link takes users to another page where they can recover their password. A sign up link at the top of the page lets users who do not yet have an account easily find the register page.
+
+![screenshot](documentation/features/sitepages/signin.png)
+
+- **Logout Page**
+
+    - Logout Page. Displays a logout confirmation message with two buttons allowing the user to confirm the action and logout, or to return to the previous page and stay logged in.
+
+![screenshot](documentation/features/sitepages/signout.png)
+
+- **Profile Page**
+
+    - Profile page. Displays a user's profile information. Lets a user see their relevant profile information in a clean and simple way, and contains an update form that users can use to update their profile information. Users can also see their order history, with full details of their order as well as links to see past order confirmations.
+
+![screenshot](documentation/features/sitepages/profile.png)
+
+- **Shopping Basket Page**
+
+    - Shopping Basket page. Displays all items currently in the user's shopping basket. Users get a message if their basket is empty, otherwise they will see a list of courses that they have selected with a button to navigate to the courses page, and another to navigate to the checkout page.
+
+![screenshot](documentation/features/sitepages/basket.png)
+
+- **Checkout Page**
+
+    - Checkout page. Displays an order summary of the items that are being prepared for purchase with accompanying item details. Displays a total cost of the order to the user. The user also sees a form to fill in their personal details. For logged in users, these details will be pre-filled if the user has provided that information in the past. A tooltip explains to users why their address details might be needed despite ordering a digital product. A checkbox allows users to save entered information to their profile. A payment input form exists at the bottom of the page for a user to enter their payment card information. A message below this warns the user that advancing will complete the purchase and incur a charge to their card.
+
+![screenshot](documentation/features/sitepages/checkout.png)
+![screenshot](documentation/features/sitepages/checkout1.png)
+
+ **Checkout Success Page**
+
+    - Checkout Success Page. Displays a thank you message to the user, as well as a message describing how to access their purchased course. Also displays an order summary with all the relevant information, including a unique order number beginning with WPA (for Web Piano Academy) followed by 10 random digits & letters generated by uuid.
+
+![screenshot](documentation/features/sitepages/checkout-success.png)
+
+- **Add Product Page - Admin Only**
+
+    - Add Product Page. Admins can use this form to add new products to the site. User-friendly form inputs allow product objects to be created simply and quickly.
+
+![screenshot](documentation/features/sitepages/add-course.png)
+- **Edit Product Page - Admin Only**
+
+    - Edit Product Page. Admins can use this form to add edit products to the site. User-friendly form inputs allow product objects to be edited simply and quickly. A message at the top of the page informs the admin which product they are editing.
+
+![screenshot](documentation/features/sitepages/edit-course.png)
+
+- **Custom Error Pages**
+
+    - Custom error handler pages. These pages display when a user encounters one of the following common errors: 400, 403, 404, 500. These provide a more user-friendly error page than the user would see otherwise and includes an informative message and button to return home to the site. 
+
+![screenshot](documentation/features/sitepages/404.png)
+
+### User Features
+
+- **User Registration**
+
+    - Users can register for an account using a front-end form. This creates a user object in the database and automatically secures the user's sensitive information.
+
+![screenshot](documentation/features/user/register.png)
+
+- **User Login**
+
+    - Users who have made an account can quickly and easily log in to their account in order to access the login-required functionality of the site.
+
+![screenshot](documentation/features/user/user-signin.png)
+
+- **User Logout**
+
+    - Users who are logged in can easily log out in order to stop access to their account-based information and functionality.
+
+![screenshot](documentation/features/user/user-signout.png)
+
+- **User Password Recovery**
+
+    - Users who have forgotten their password can recover their password via the forgot password link on the login page. Users will enter their email and get a password reset link sent to their account email which they can use to set a new password.
+
+![screenshot](documentation/features/user/password-reset.png)
+
+- **Toasts**
+
+    - Users see helpful popup messages when performing actions on the site. These messages inform the user of the success or failure of their actions, as well as providing information about an action taken, or steps that the user must take in order to correct an action.
+
+![screenshot](documentation/features/user/toast1.png)
+![screenshot](documentation/features/user/toast2.png)
+![screenshot](documentation/features/user/toast3.png)
+
+- **Basket Updates**
+
+    - Via toasts, users can see a summary of their basket whenever an item is added, allowing the user to quickly see the new state of their basket, without having to navigate away from the page they are currently on.
+
+![screenshot](documentation/features/user/basket-update.png)
+
+
+- **Login Dependant Navbar Links**
+
+    - Users who are logged in see new links in the navbar. 'Register' and 'Login' links are replaced with 'My Account' links. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
+
+![screenshot](documentation/features/user/login1.png
+![screenshot](documentation/features/user/login2.png)
+
+- **Login Redirect**
+
+    - Users who are not logged in who attempt to access an area of the site which requires login are redirected to the login page. After logging in, they are sent to the page they first intended to visit.
+
+![screenshot](documentation/features/user/redirect.png)
+
+- **User Profile Creation**
+
+    - User profiles are automatically created upon user registration. This assigns each user a profile which they can use to see/update their user information.
+
+![screenshot](documentation/features/user/profile-creation.png)
+
+- **User Contact**
+
+    - Users can use a front-end form to message the site owners. The form is easy to use and pre-fills the user's email address if they are logged in. Users get confirmation that their message was sent, and a message that someone from the site will be in touch as soon as possible
+
+![screenshot](documentation/features/user/user-contact.png)
+
+- **User Email Confirmations**
+
+    - After making a purchase or subscribing to the newsletter, the site automatically sends the user a confirmation email which contains their purchase details, or in the case of newsletter subscription, a thank you message and a link to unsubscribe.
+
+![screenshot](documentation/features/user/email-confimation.png)
+![screenshot](documentation/features/user/emian-confirmation-1.png)
+
+- **Course Sort**
+
+    - Users can use a front-end dropdown box to sort the available courses by criteria such as price, name, category, and level. This allows the user to get to the relevant content more quickly, without having to manually sort through the entire product list.
+
+![screenshot](documentation/features/user/course-sort.png)
+
+- **Course Search**
+
+    - Users can use a front-end dropdown to enter search criteria for the purposes of searching for courses to purchase. This allows users to instantly find courses related to their search keywords, allowing them to navigate straight to the relevant products.
+
+![screenshot](documentation/features/user/course-search.png)
+
+- **Newsletter Subscribe**
+
+    - Users can use a button in the footer of all site pages to subscribe to the site newsletter. If the user is logged in, the email input field will pre-fill with the user's email. Users see a confirmation screen after subscribing, and receive a confirmation email to the address they provided.
+
+![screenshot](documentation/features/user/newsletter1.png)
+![screenshot](documentation/features/user/newsletter2.png)
+
+
+
+
