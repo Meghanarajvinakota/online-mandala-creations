@@ -46,12 +46,12 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="{% url 'contact-list' %}">Back to Contact List</a>
+            <a class ="btn btn-black" href="{% url 'contact-list' %}">Back to Contact List</a>
             <div class="text-center my-5" id="message-detail-button-container">
                 {% if object.responded %}
                 {% else %}
                     <!-- Displays the response form on click -->
-                    <button class="btn black-button" onclick="responseForm()">Respond To Message <i class="fa-solid fa-caret-down"></i></button>
+                    <button class="btn btn-black" onclick="responseForm()">Respond To Message <i class="fa-solid fa-caret-down"></i></button>
                 {% endif %}
                 <!-- Deletes the message -->
                 <a class="btn btn-danger" href="{% url 'contact-delete' object.id %}">Delete Message</a>

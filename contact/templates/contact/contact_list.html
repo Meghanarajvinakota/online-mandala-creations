@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
-
-    <div class="default-page-container">
+<div class="overlay"></div>
+    <div class="container">
         <h1 class="default-page-header">Contact Requests</h1>
         <div id="contact-table-container-outer">
             <div id="contact-table-container">
