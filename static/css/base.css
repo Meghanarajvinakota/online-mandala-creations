@@ -770,6 +770,10 @@ footer {
     padding-top: 200px;
 }
 
+.default-page-container{
+    margin-top: 200px;
+    min-height: 100vh;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
