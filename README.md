@@ -1,7 +1,7 @@
 # [ONLINE MANDALA CREATIONS](https://online-manadala-creations-6dbde778a153.herokuapp.com/)
 
 
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/responsive.png)
 
 Online Mandala Creations is a fully functioning e-commerce web application. The site allows users to view and purchase digital mandala courses online. Users can easily create personal accounts and profiles and see information on the site, and the courses themselves. The site also enables administrators to add, edit and remove products, as well as view and respond to contact enquiries.
 
