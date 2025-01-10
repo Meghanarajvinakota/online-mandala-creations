@@ -705,13 +705,11 @@ You can fork this repository by using the following steps:
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
 | [StackOverflow](https://stackoverflow.com/questions/3578882) | Django Authentication | How to specify the login_required redirect url in django |
-| [StackOverflow](https://stackoverflow.com/questions/47089450) | automated testing | How to test content of a Django email |
-| [Cornell Music Academy](https://cornellmusicacademy.com/) | entire site | Used as a basis for text on various site pages |
+| [StackOverflow](https://stackoverflow.com/questions/47089450) | automated testing | How to test content of a Django email  |
 | [Bootstrap Components](https://getbootstrap.com/docs/5.3/examples/) | entire site | Bootstrap stock components used as a base for various site features such as navbar & footer |
 | [Codepen](https://codepen.io/AramayisO/pen/xzoYeM) | Navbar | Scrolling transition navbar |
 | [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) | entire site | Various code sections taken from the CI Boutique Ado Walkthrough Project |
-| [Rory Sheridan](https://github.com/Ri-Dearg/neverlost-thrift/blob/master/products/views.py) | Testing | My mentor's code repository - various code snippets taken from tests.py for automated python testing |
-| [Lewis Dillon (me)](https://github.com/LewisMDillon/bushy-park-tennis-club-ld) | entire site | Various code snippets taken from my previous project |
+| [Lewis Dillon](https://github.com/LewisMDillon/web-piano-academy) | Testing | My mentor's code repository - various code snippets taken from tests.py for automated python testing |
 | [Alvarotrigo](https://alvarotrigo.com/blog/css-accordion/) | FAQ page | HTML & CSS for FAQ Accordion |
 
 ### Media
@@ -720,9 +718,7 @@ All media files are used from Google and pexels
 
 ### Acknowledgements
 
-
-- I would like to thank my partner Rachel, for believing in me, and helping me to make this transition into software development.
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Rahul] for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 

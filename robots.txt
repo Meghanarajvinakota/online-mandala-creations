@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://online-manadala-creations-6dbde778a153.herokuapp.com/sitemap.xml
