@@ -378,4 +378,9 @@ In order to run the tests, I ran the following command in the terminal each time
 
 - There is one error in html pages when we test in w3 html validator.
 - script type error(i didn't removed it because incase if it give any errors with script).
--There are no remaining bugs that I am aware of.
+- There is one error in unsubscribe page.In only one  device i couldn't able to see the button and it goes underneath the nav bar.I trie dto fix this when i contacted tutor support they will be able to to see that.I added one reference picture here.
+![screenshot](documentation/bug.png)
+- I can able to see on other devices .I added referenece picture here.
+![screenshot](documentation//bug2.png)
+- There are no remaining bugs that I am aware of.
+
